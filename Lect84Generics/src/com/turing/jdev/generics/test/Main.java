@@ -48,7 +48,7 @@ public class Main {
 		france.matchResult(steelers, 10, 8);
 		
 		giants.matchResult(france, 5, 5);
-		giants.matchResult(industriales, 10, 10);
+		// giants.matchResult(industriales, 10, 10);
 		
 		
 		

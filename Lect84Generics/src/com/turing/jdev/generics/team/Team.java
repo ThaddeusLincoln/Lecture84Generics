@@ -36,7 +36,7 @@ public class Team<T extends Player> {
 	}
 	
 	// keeps track of every match results, for the current team and also for the opponent
-	public void matchResult(Team opponent, int ourScore, int theirScore){
+	public void matchResult(Team<T> opponent, int ourScore, int theirScore){
 		
 		String message;
 		
