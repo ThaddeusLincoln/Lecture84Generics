@@ -51,8 +51,9 @@ public class Main {
 		// giants.matchResult(industriales, 10, 10);
 		
 		System.out.println("France ranking : " + france.ranking());
+		System.out.println(france.compareTo(england));				// using compareTo()
 		
-		
+		// NOTE : in the end the most helpful is using Collections.sort() once the classes have implemented Comparable
 		
 		
 		

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.turing.jdev.generics.Player;
 
 public class Team<T extends Player> implements Comparable<Team<T>> {
+	// the parameters in the Interface declaration assure that we will only compare to the same type that the class handles
 	
 	private String name;
 
@@ -67,9 +68,14 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
 	}
 
 	@Override
-	public int compareTo(Team<T> o) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(Team<T> otherTeam) {
+		if(this.ranking() > otherTeam.ranking()){
+			return -1;
+		}else if (this.ranking() < otherTeam.ranking()){
+			return 1;
+		}else{
+			return 0;
+		}
 	}
 
 }
