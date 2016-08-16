@@ -30,6 +30,29 @@ public class Main {
 		// Team<String> falseTeam = new Team<String>("False team");
 		// which will cause an error at runtime
 		
+		Team<SoccerPlayer> bayern = new Team<SoccerPlayer>("Bayern Munschen");
+		bayern.addPlaye(pkluivert);
+		
+		Team<FootballPlayer> steelers = new Team<FootballPlayer>("Pitsburg Steelers");
+		FootballPlayer abrown = new FootballPlayer("Antonio Brown");
+		steelers.addPlaye(abrown);
+		
+		Team<FootballPlayer> jets = new Team<FootballPlayer>("New York Jets");
+		FootballPlayer bmarshal = new FootballPlayer("Brandon Marshall");
+		jets.addPlaye(bmarshal);
+		
+		Team<FootballPlayer> france = new Team<FootballPlayer>("France");
+		Team<FootballPlayer> england = new Team<FootballPlayer>("England");
+		
+		france.matchResult(england, 10, 2);
+		france.matchResult(steelers, 10, 8);
+		
+		giants.matchResult(france, 5, 5);
+		giants.matchResult(industriales, 10, 10);
+		
+		
+		
+		
 		
 		
 		
