@@ -1,6 +1,6 @@
 package com.turing.jdev.generics.test;
 
-import java.util.ArrayList;
+import sun.security.provider.PolicyParser.GrantEntry;
 
 import com.turing.jdev.generics.impl.BaseballPlayer;
 import com.turing.jdev.generics.impl.FootballPlayer;
@@ -50,7 +50,7 @@ public class Main {
 		giants.matchResult(france, 5, 5);
 		// giants.matchResult(industriales, 10, 10);
 		
-		
+		System.out.println("France ranking : " + france.ranking());
 		
 		
 		

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.turing.jdev.generics.Player;
 
-public class Team<T extends Player> {
+public class Team<T extends Player> implements Comparable<Team<T>> {
 	
 	private String name;
 
@@ -64,6 +64,12 @@ public class Team<T extends Player> {
 	
 	public String getName() {
 		return name;
+	}
+
+	@Override
+	public int compareTo(Team<T> o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
