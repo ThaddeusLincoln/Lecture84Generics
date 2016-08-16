@@ -1,0 +1,26 @@
+An ArrayList that hasn't been parammetized (raw types) can contain anything, it basically is taking in Objects and of course
+for taking the actual value out a cast is mandatory. This ain't a good praxis because it breaks the compilier's type checking.
+So, if for instance we add a String value, in a list that is supposed to hold integer value, the error won't appear at compilation time,
+but at runtime, which is real bad news.
+
+Raw type was the standard until java < 1.5. The existence of raw types only obeys to maintain compatibility. 
+
+It's commonly understood in programming terms that the earlier a bug is spotted in the code, the easier and 
+ultimately cheaper it is to fix. 
+
+- In order to make this sample a better code, we're gonna make the class Team generic. But we also might need a mechanism
+for restricting the types that can be use as type arguments  : bounder types parameters.
+
+Notes:
+- We can also pass interfaces in the arguments of a generic class.
+- And Interfaces themselves can also specify parameters
+- Java does allow multiple bounds, i.e: 
+<T extends B1 & B2 & B3>
+e.g:
+
+public class FooBarWrapper<T extends Foo & Bar> {...}
+
+Important to note that when using multiple bounds we should put classes first interfaces later (the one class, as Java
+doesn't allow multiple inheritance). Otherwise we'll get a compile error.
+
+Implementing Comparable interface, allows to use Collections.sort(List<T>)
