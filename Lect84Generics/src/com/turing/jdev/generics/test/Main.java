@@ -2,25 +2,26 @@ package com.turing.jdev.generics.test;
 
 import java.util.ArrayList;
 
+import com.turing.jdev.generics.impl.BaseballPlayer;
+import com.turing.jdev.generics.impl.FootballPlayer;
+import com.turing.jdev.generics.impl.SoccerPlayer;
+import com.turing.jdev.generics.team.Team;
+
 public class Main {
 
 	public static void main(String[] args){
 		
-		ArrayList<Integer> items = new ArrayList<Integer>();
-		items.add(1);
-		items.add(2);
-		items.add(3);
-		// items.add("UN TEXTO CUALQUIERA");
-		items.add(4);
-		items.add(5);
+		FootballPlayer jrice = new FootballPlayer("Jerry Rice");
+		BaseballPlayer kgriffey = new BaseballPlayer("Ken Griffey Jr.");
+		SoccerPlayer pkluivert = new SoccerPlayer("Patrick Kluivert");
 		
-		printDoubled(items);
+		Team giants = new Team("New York Giants");
+		giants.addPlaye(pkluivert);
+		giants.addPlaye(kgriffey);
+		giants.addPlaye(jrice);
 		
-	}
-	
-	private static void printDoubled(ArrayList<Integer> list){
-		for(int num : list){
-			System.out.println(num * 2);
-		}
+		System.out.println(giants.getPlayersCount());
+		
+		
 	}
 }
