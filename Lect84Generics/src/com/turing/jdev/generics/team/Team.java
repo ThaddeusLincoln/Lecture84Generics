@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.turing.jdev.generics.Player;
 
-public class Team<T> {
+public class Team<T extends Player> {
 	
 	private String name;
 	
@@ -22,11 +22,11 @@ public class Team<T> {
 	
 	public boolean addPlaye(T player){
 		if(member.contains(player)){
-			System.out.println(((Player)player).getName() + " is already in the team");
+			System.out.println(player.getName() + " is already in the team");
 			return false;
 		}else{
 			member.add(player);
-			System.out.println(((Player)player).getName() + " picked for team " + this.name);
+			System.out.println(player.getName() + " picked for team " + this.name);
 			return true;
 		}
 	}
