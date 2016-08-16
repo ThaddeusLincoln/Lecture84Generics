@@ -5,6 +5,7 @@ import sun.security.provider.PolicyParser.GrantEntry;
 import com.turing.jdev.generics.impl.BaseballPlayer;
 import com.turing.jdev.generics.impl.FootballPlayer;
 import com.turing.jdev.generics.impl.SoccerPlayer;
+import com.turing.jdev.generics.league.League;
 import com.turing.jdev.generics.team.Team;
 
 public class Main {
@@ -55,7 +56,12 @@ public class Main {
 		
 		// NOTE : in the end the most helpful is using Collections.sort() once the classes have implemented Comparable
 		
+		League<Team<FootballPlayer>> nfl = new League<Team<FootballPlayer>>("NFL");
+		nfl.add(giants);
+		nfl.add(france);
+		nfl.add(england);
 		
+		nfl.showLeagueTable();
 		
 	}
 }
