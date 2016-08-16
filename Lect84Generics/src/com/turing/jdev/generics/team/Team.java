@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.turing.jdev.generics.Player;
 
-public class Team {
+public class Team<T> {
 	
 	private String name;
 	
@@ -13,20 +13,20 @@ public class Team {
 	int lost = 0;
 	int tied = 0;
 	
-	private ArrayList<Player> member = new ArrayList<Player>();
+	private ArrayList<T> member = new ArrayList<T>();
 	
 	// CONSTRUCTOR
 	public Team(String name){
 		this.name = name;
 	}
 	
-	public boolean addPlaye(Player player){
+	public boolean addPlaye(T player){
 		if(member.contains(player)){
-			System.out.println(player.getName() + " is already in the team");
+			System.out.println(((Player)player).getName() + " is already in the team");
 			return false;
 		}else{
 			member.add(player);
-			System.out.println(player.getName() + " picked for team " + this.name);
+			System.out.println(((Player)player).getName() + " picked for team " + this.name);
 			return true;
 		}
 	}

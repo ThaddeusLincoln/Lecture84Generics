@@ -15,12 +15,22 @@ public class Main {
 		BaseballPlayer kgriffey = new BaseballPlayer("Ken Griffey Jr.");
 		SoccerPlayer pkluivert = new SoccerPlayer("Patrick Kluivert");
 		
-		Team giants = new Team("New York Giants");
-		giants.addPlaye(pkluivert);
-		giants.addPlaye(kgriffey);
+		Team<FootballPlayer> giants = new Team<FootballPlayer>("New York Giants");
+		// we'll get a compilation time error if we try to add something that is not a football player to the team
+		/*giants.addPlaye(pkluivert);
+		giants.addPlaye(kgriffey);*/
 		giants.addPlaye(jrice);
 		
 		System.out.println(giants.getPlayersCount());
+		
+		Team<BaseballPlayer> industriales = new Team<BaseballPlayer>("Industriales");
+		industriales.addPlaye(kgriffey);
+		
+		// nevertheless nothing forbid us from doing this
+		// Team<String> falseTeam = new Team<String>("False team");
+		// which will cause an error at runtime
+		
+		
 		
 		
 	}
